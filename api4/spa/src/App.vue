@@ -2,10 +2,10 @@
   <div>
     
     <!-- come essa nav esta sendo colocada imediatamente, esta sendo como um arquivo master -->
-    <nav>
-      <router-link to="/login">Login</router-link> |
-      <router-link to="/register">Cadastrar</router-link> |
-      <router-link :to="{name:'about'}">Sobre</router-link> |
+    <nav class="text-center">
+      <router-link to="/">Tarefas</router-link> |
+      <router-link to="/tarefas/create">Nova Tarefa</router-link> |
+      <router-link to="/tarefas/concluidas">Tarefas Concluidas</router-link> |
       <!-- <router-link :to="rotaDinamica"> Contato </router-link> | -->
     </nav>
 
