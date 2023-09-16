@@ -1,26 +1,33 @@
+
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+
+    <div class="container text-center">
+      <div class="row">
+        <h1 class="display-5">Ola Vue </h1>
+      </div>
+    </div>
+    
+      <hr>
+      <FormTarefas/>
+      <hr>
+      <ListaTarefa/>
+    </div>
+
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import ListaTarefa from './components/ListaTarefas.vue';
+import FormTarefas from './components/FormTarefas.vue';
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+export default{
+  name:'App',
+
+  components:{
+    ListaTarefa,
+    FormTarefas,
+  },
+  
 }
+
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
