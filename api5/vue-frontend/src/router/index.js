@@ -13,6 +13,13 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
   }
   ,
+
+
+
+
+
+
+
   //CATEGORIES -------------------------------------------------------------
   {
     path: '/categories/create',
@@ -60,9 +67,14 @@ const routes = [
 
 
 
-
-
-
+  //ITENS -------------------------------------------------------------
+  {
+    path: '/itens/create',
+    name: 'itens-create',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Iten/CreateView.vue')
+  }
+  ,
+  //-------------------------------------------------------------------------
 
 
 

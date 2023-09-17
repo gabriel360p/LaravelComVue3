@@ -88,8 +88,12 @@ Route::post('/categories/store', function (Request $request) {
 
 // ITENS ----------------------------------------------
 
-Route::get('/itens', function () {
+Route::get('/itens/list', function () {
     return json_encode(Categorie::all());
+});
+
+Route::post('/itens/store', function (Request $request) {
+    Iten::create($request->all());
 });
 
 // -----------------------------------------------------

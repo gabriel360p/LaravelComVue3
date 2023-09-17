@@ -13,7 +13,7 @@
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
 
-              <router-link class="nav-link" to="" aria-current="page">Adicionar Perdido</router-link>
+              <router-link class="nav-link" to="/itens/create" aria-current="page">Adicionar Perdido</router-link>
 
             </li>
             <li class="nav-item">

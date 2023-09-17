@@ -13,11 +13,17 @@ return new class extends Migration
     {
         Schema::create('itens', function (Blueprint $table) {
             $table->id();
+            
             $table->string('name');
             $table->text('more');
-            $table->boolean('refound');
-            $table->foreignId('place_id')->constrained();
-            $table->foreignId('categorie_id')->constrained();
+
+            $table->boolean('refound')->default(false);
+
+            $table->string('place');
+            $table->string('categorie');
+
+            // $table->foreignId('place_id')->constrained();
+            // $table->foreignId('categorie_id')->constrained();
 
             $table->timestamps();
         });

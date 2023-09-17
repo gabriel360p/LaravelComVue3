@@ -11,8 +11,10 @@ class Iten extends Model
     protected $fillable=[
         'name',
         'more',
-        'refound',
-        'place_id',
-        'categorie_id',
+        'place',
+        'categorie',
+        // 'refound',
+        // 'place_id',
+        // 'categorie_id',
     ];
 }
