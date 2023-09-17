@@ -13,7 +13,7 @@ class Iten extends Model
         'more',
         'place',
         'categorie',
-        // 'refound',
+        'refound',
         // 'place_id',
         // 'categorie_id',
     ];

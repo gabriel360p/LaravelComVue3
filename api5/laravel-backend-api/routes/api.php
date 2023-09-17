@@ -89,11 +89,41 @@ Route::post('/categories/store', function (Request $request) {
 // ITENS ----------------------------------------------
 
 Route::get('/itens/list', function () {
-    return json_encode(Categorie::all());
+    return  \DB::table('itens')->where('refound','=',false)->get();
+});
+
+Route::get('/itens/refounds', function () {
+    return  \DB::table('itens')->where('refound','=',true)->get();
 });
 
 Route::post('/itens/store', function (Request $request) {
     Iten::create($request->all());
 });
 
+Route::delete('/itens/delete', function (Request $request) {
+    Iten::find($request->id)->delete();
+});
+
+Route::get('/itens/edit', function (Request $request) {
+    // Iten::create($request->all());
+});
+
+Route::put('/itens/update', function (Request $request) {
+    // Iten::create($request->all());
+});
+
+Route::put('/itens/refound', function (Request $request) {
+    $i=Iten::find($request->id);
+    $i->update([
+        'refound'=>true,
+    ]);
+});
+
+Route::put('/itens/reopen', function (Request $request) {
+    $i=Iten::find($request->id);
+    $i->update([
+        'refound'=>false,
+    ]);
+    
+});
 // -----------------------------------------------------

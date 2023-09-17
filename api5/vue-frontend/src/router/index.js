@@ -74,6 +74,12 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/Iten/CreateView.vue')
   }
   ,
+  {
+    path: '/itens/refounds',
+    name: 'itens-refounds',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Iten/RefoundsView.vue')
+  }
+  ,
   //-------------------------------------------------------------------------
 
 

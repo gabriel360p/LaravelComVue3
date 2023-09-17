@@ -24,6 +24,7 @@ export default{
     },
 
     deletar_tarefa:(tarefa)=>{
+        
         return http.delete('/tarefas/delete', {data:tarefa});    
     },
     
