@@ -12,11 +12,7 @@ export default{
     },
 
     show_tarefa:(id)=>{
-        return http.get('/tarefas/show', {
-            params: {
-                id: id
-            }
-        })
+        return http.get('/tarefas/show', { params: {id: id}})
     },
 
     salvar_tarefas:(tarefa)=>{

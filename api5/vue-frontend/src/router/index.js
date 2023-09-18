@@ -80,6 +80,12 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/Iten/RefoundsView.vue')
   }
   ,
+  {
+    path: '/itens/edit/:id',
+    name: 'itens-edit',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Iten/EditView.vue')
+  }
+  ,
   //-------------------------------------------------------------------------
 
 
