@@ -28,7 +28,7 @@
               <hr>
               <button @click="iten_refound(iten)" class="btn btn-outline-success" v-if="iten.refound==false">Devolvido</button>
               <button @click="iten_reopen(iten)" class="btn btn-outline-success" v-else>Reabrir</button>
-              <!-- <button class="btn btn-outline-success">Abrir</button> -->
+              <router-link :to="`/itens/edit/${iten.id}`" class="btn btn-outline-success">Abrir</router-link>
               <button @click="iten_expurgue(iten)" class="btn btn-outline-danger">Deletar</button>
             </div>
   
