@@ -73,14 +73,18 @@ export default {
 
     iten_expurgue(iten){
       Itens.deletar_item(iten);
+      this.all();
     },
 
     iten_refound(iten){
       Itens.devolver_item(iten)
+      this.all();
+
     },
 
     iten_reopen(iten){
       Itens.reabrir_item(iten);
+      
     }
 
   },
