@@ -18,6 +18,13 @@ export default{
     },
 
     register:(credentials)=>{
-        return http.post('/register',credentials)
-    }
+        return http.post('/register',{
+        email: credentials.email,
+        password: credentials.password,
+        name: credentials.nome
+          }
+        )
+    },
+
+
 }

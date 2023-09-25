@@ -3,7 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Requests\LoginRequest;
-
+use App\Models\User;
 
 /*
 |--------------------------------------------------------------------------
@@ -44,3 +44,8 @@ Route::post('/login',function(LoginRequest $request){
     }
 
 })->name('login');
+
+Route::post('/register',function(LoginRequest $request){
+    User::create($request->all());
+    return response(200);
+})->name('register');
