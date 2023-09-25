@@ -18,10 +18,36 @@ use App\Models\Iten;
 |
 */
 
-// Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-//     return $request->user();
-// });
+Route::middleware('api')->get('/user', function (Request $request) {
+    return $request->user();
+});
 
+
+// AUTH ----------------------------------------------
+Route::post('/login',function(Request $request){
+    $credentials= $request->only(['email','password']);
+
+    if(!$token=auth('api')->attempt($credentials)){
+        return abort(401,"Não Autorizado");
+    }else{
+	//mandando o token após o login bem feito
+        return response()->json([
+            // 'data'=>[
+                'access_token'=>$token,
+                'token_type'=>'bearer',
+                'expires_in'=>auth('api')->factory()->getTTL()*60,
+            // ]
+        ]);
+    }
+})->name('login');
+
+Route::post('/register',function(Request $request){
+    // return $request->only(['email','password', 'name']);
+    User::create($request->all());
+    return response(200);
+})->name('register');
+
+// -----------------------------------------------------
 
 
 

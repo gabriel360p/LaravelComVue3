@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Requests\LoginRequest;
 use App\Models\User;
 
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -22,8 +23,8 @@ use App\Models\User;
 
 
 //middleware de auth para api's usando o jwt
-Route::middleware('api')->get('/user', function (Request $request) {
-        return $request->user();
+Route::middleware('api')->get('/user', function (Request $request){
+    return $request->user();
 });
     
 
@@ -45,7 +46,10 @@ Route::post('/login',function(LoginRequest $request){
 
 })->name('login');
 
+
 Route::post('/register',function(LoginRequest $request){
     User::create($request->all());
     return response(200);
 })->name('register');
+
+

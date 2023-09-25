@@ -41,11 +41,11 @@ return [
             'provider' => 'users',
         ],
 
-        //adiciona isso do jwt
         'api'=>[
             'driver'=>'jwt',
             'provider'=>'users',
-        ]
+        ],
+        
     ],
 
     /*

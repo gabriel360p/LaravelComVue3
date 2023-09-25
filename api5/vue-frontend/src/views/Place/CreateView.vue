@@ -1,7 +1,8 @@
 <template>
-
-    <div class="container mt-3">
-        <div class="row">
+    <div>
+        <Navbar/>
+        <div class="container mt-3">
+            <div class="row">
             <div class="card p-4">
                 <div class="card-header">
                     <span class="display-5">Novo Lugar</span>
@@ -18,30 +19,35 @@
             </div>
         </div>
 
-        <div class="row mt-3">
-            <div>
-                <span class="display-5">Lugares</span>
-            </div>
-
-            <div>
-                <div class="m-2 p-2" v-for="place in places" :key="place.id">
-                    <li>{{ place.name }}</li>
+            <div class="row mt-3">
+                <div>
+                    <span class="display-5">Lugares</span>
                 </div>
+                
+                <div>
+                    <div class="m-2 p-2" v-for="place in places" :key="place.id">
+                        <li>{{ place.name }}</li>
+                    </div>
+                </div>
+
             </div>
-
+        
+        
         </div>
-
-
     </div>
 
 </template>
 
 <script>
+import Navbar from '../../components/NavbarComp.vue';
 import Places from "../../services/Places";
 
 export default{
     name: 'CreateView',
-    
+    components:{
+        Navbar,
+    },
+
     data(){
         return{
             place:{

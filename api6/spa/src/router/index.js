@@ -1,6 +1,6 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import Middleware from '@/services/middleware'
+  import Middleware from '@/services/middleware'
 
 const routes = [
   {
@@ -33,10 +33,7 @@ const routes = [
     name: 'content-dashboard',
     //passando o middleware antes da renderização do componente
     beforeEnter: Middleware.guard,
-    
-
     component: () => import(/* webpackChunkName: "about" */ '../views/DashView.vue')
-
   },
 ]
 

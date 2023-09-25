@@ -1,7 +1,7 @@
 <template>
 
     <div >
-  
+      <Navbar/>
       <div class="container">
   
         <div class="row">
@@ -44,10 +44,14 @@
   
   <script>
   import Itens from '@/services/Itens';
+import Navbar from '../../components/NavbarComp.vue'
   
   export default {
     name: 'HomeView',
-  
+    components:{
+      Navbar,
+    },
+
     data(){
       return{
         iten:{

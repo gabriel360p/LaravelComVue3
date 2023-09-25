@@ -8,7 +8,7 @@ export default{
     return http.post('/login', {
       email: credentials.email,
       password: credentials.password
-    })
+    })  
     .then(response => {
         if (response.data.access_token!='') {
           Cookies.set('_AuthTokenAccess_',response.data.access_token);
@@ -25,6 +25,4 @@ export default{
           }
         )
     },
-
-
 }

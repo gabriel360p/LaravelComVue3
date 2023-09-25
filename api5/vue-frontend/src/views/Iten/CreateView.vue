@@ -1,6 +1,7 @@
 <template>
-
-<div class="container mt-3">
+<div>
+<Navbar/>
+    <div class="container mt-3">
         <div class="row">
             <div class="card p-4">
                 <div class="card-header">
@@ -24,13 +25,13 @@
                     <div class="mb-3">
                         <label for="" class="form-label">Categoria</label>
                         <select class="form-select form-select-lg" name="categorie" v-model="iten.categorie" required id="">
-
+                            
                             <option v-for="categorie in categories" :key="categorie.id">{{ categorie.name }}</option>
 
                         </select>
                     </div>
 
-
+                    
                     <div class="mb-3">
                       <label for="" class="form-label">Descrição</label>
                       <textarea class="form-control" name="more" required v-model="iten.more" id="" rows="3"></textarea>
@@ -41,6 +42,7 @@
             </div>
         </div>
     </div>
+</div>
 
 </template>
 
@@ -48,9 +50,14 @@
 import Itens from "../../services/Itens"
 import Places from "../../services/Places"
 import Categories from "../../services/Categories"
+import Navbar from '../../components/NavbarComp.vue'
 
 export default{
     name:'CreateView',
+
+    components:{
+        Navbar,
+    },
 
     data(){
         return{

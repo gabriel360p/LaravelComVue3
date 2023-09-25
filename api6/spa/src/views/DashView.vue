@@ -1,6 +1,6 @@
 
 <template>
-    <div class="container">
+    <!-- <div class="container">
         <div class="row">
             <span class="display-5">Dashboard</span>
         </div>
@@ -10,20 +10,20 @@
                 <button class="btn btn-outline-danger" @click="logout()">Sair</button> 
             </div>
         </div>
-    </div>
+    </div> -->
 </template>
 
 
 <script>
-import Cookies from "js-cookie";
+// import Cookies from "js-cookie";
 
 export default{
     name:'DashView',
 
-    methods:{
-        logout(){
-            Cookies.remove('_AuthTokenAccess_');
-        }
-    }
+    // methods:{
+    //     // logout(){
+    //     //     Cookies.remove('_AuthTokenAccess_');
+    //     // }
+    // }
 }
 </script>

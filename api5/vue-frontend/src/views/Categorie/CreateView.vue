@@ -1,5 +1,6 @@
 <template>
-
+<div>
+    <Navbar/>
     <div class="container mt-3">
         <div class="row">
             <div class="card p-4">
@@ -34,14 +35,19 @@
 
 
     </div>
+</div>
 
 </template>
 
 <script>
+import Navbar from '../../components/NavbarComp.vue';
 import Categories from "../../services/Categories";
 
 export default{
     name: 'CreateView',
+    components:{
+        Navbar,
+    },
 
     data(){
         return{
