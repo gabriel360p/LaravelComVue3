@@ -23,7 +23,11 @@
                 <div>
                     <span class="display-5">Lugares</span>
                 </div>
-                
+
+              <div class="mt-2">
+                <button class="btn btn-outline-success" @click="atualizarPag()">Atualizar</button>
+              </div>
+
                 <div>
                     <div class="m-2 p-2" v-for="place in places" :key="place.id">
                         <li>{{ place.name }}</li>
@@ -62,14 +66,16 @@ export default{
     },
 
     methods:{
-        save_place(){
-            Places.salvar_lugar(this.place);
-            this.place=[];
-        },
-
-        all(){
-            Places.listar_lugares().then(response=>{this.places=response.data});
-        }
+      atualizarPag(){
+        location.reload();
+      },
+      save_place(){
+          Places.salvar_lugar(this.place);
+          this.place=[];
+      },
+      all(){
+          Places.listar_lugares().then(response=>{this.places=response.data});
+      }
     }
 }
 

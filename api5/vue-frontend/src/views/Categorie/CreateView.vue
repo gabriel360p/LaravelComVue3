@@ -24,6 +24,9 @@
                 <span class="display-5">Categorias</span>
             </div>
 
+          <div>
+            <button class="btn btn-outline-success mt-2" @click="attPag()"> Atualizar </button>
+          </div>
             <div>
                 <div v-for="categorie in categories" :key="categorie.id" class=" p-2 m-2">
                     <li> {{ categorie.name }}</li>    
@@ -59,11 +62,14 @@ export default{
     },
 
     methods:{
+      attPag(){
+        location.reload();
+      },
         store_categorie(){
             Categories.salvar_categoria(this.categorie);
-            this.categorie=[];
+            this.categorie=[]; 
         },
-
+        
         all(){
             Categories.listar_categorias()
             .then(response=>{

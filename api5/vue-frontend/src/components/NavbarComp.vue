@@ -24,7 +24,6 @@
             <li class="nav-item">
 
               <router-link class="nav-link" to="/places/create" aria-disabled="true">Lugares</router-link>
-
             </li>
             <li class="nav-item">
 
@@ -38,7 +37,7 @@
             </li>
 
             <li class="nav-item">
-              <button @click="logout()">sair</button>
+              <button class="nav-link" style="border: none; background-color: transparent" @click="logout()">Sair</button>
             </li>
 
           </ul>

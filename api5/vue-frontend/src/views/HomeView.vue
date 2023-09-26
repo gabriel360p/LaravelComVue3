@@ -1,7 +1,8 @@
 <template>
-  <div>
-    <Navbar/>
 
+<div>
+
+  <Navbar/>
     <div class="container">
 
       <div class="row">
@@ -16,9 +17,9 @@
             <h4>  {{ iten.name }} </h4>
             <hr>
           </div>
-          
+
           <div class="card-body">
-            
+
             <p>{{ iten.more }}</p>
 
             <p class="badge bg-warning" v-if="iten.refound==false">Não devolvido</p>
@@ -31,7 +32,7 @@
             <button @click="iten_reopen(iten)" class="btn btn-outline-success" v-else>Reabrir</button>
 
             <router-link :to="`/itens/edit/${iten.id}`" class="btn btn-outline-success">Abrir</router-link>
-            
+
             <button @click="iten_expurgue(iten)" class="btn btn-outline-danger">Deletar</button>
           </div>
 
@@ -40,11 +41,9 @@
       </div>
 
     </div>
-
   </div>
-  
-</template>
 
+</template>
 <script>
 import Itens from '@/services/Itens';
 import Navbar from '../components/NavbarComp.vue';

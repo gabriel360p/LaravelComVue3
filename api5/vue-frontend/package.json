@@ -13,7 +13,9 @@
     "js-cookie": "^3.0.5",
     "react-icons": "^4.11.0",
     "vue": "^3.2.13",
-    "vue-router": "^4.0.3"
+    "vue-preloader": "^1.1.2",
+    "vue-router": "^4.0.3",
+    "vue-spinner": "^1.0.4"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
