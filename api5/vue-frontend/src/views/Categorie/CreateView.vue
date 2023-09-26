@@ -25,7 +25,7 @@
             </div>
 
           <div>
-            <button class="btn btn-outline-success mt-2" @click="attPag()"> Atualizar </button>
+            <button class="btn btn-outline-success mt-2" @click="attPag()"> <NpmIcon/>  </button>
           </div>
             <div>
                 <div v-for="categorie in categories" :key="categorie.id" class=" p-2 m-2">
@@ -45,13 +45,15 @@
 <script>
 import Navbar from '../../components/NavbarComp.vue';
 import Categories from "../../services/Categories";
+import {  NpmIcon } from 'vue3-simple-icons'
 
 export default{
     name: 'CreateView',
     components:{
+       NpmIcon,
+
         Navbar,
     },
-
     data(){
         return{
             categorie:{
