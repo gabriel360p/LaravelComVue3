@@ -6,6 +6,10 @@ use App\Models\Place;
 use App\Models\User;
 use App\Models\Categorie;
 use App\Models\Iten;
+use App\Http\Requests\CategorieRequest;
+use App\Http\Requests\PlaceRequest;
+use App\Http\Requests\LoginRequest;
+use App\Http\Requests\ItenRequest;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,7 +28,7 @@ Route::middleware('api')->get('/user', function (Request $request) {
 
 
 // AUTH ----------------------------------------------
-Route::post('/login',function(Request $request){
+Route::post('/login',function(LoginRequest $request){
     $credentials= $request->only(['email','password']);
 
     if(!$token=auth('api')->attempt($credentials)){

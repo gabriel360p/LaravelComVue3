@@ -19,6 +19,10 @@
             </form>
         </div>
 
+        <span v-if=" validate!= '' ">
+            {{ validate }}
+        </span>
+
         </div>  
         
         <div class="row text-center">
@@ -32,6 +36,7 @@
 <script>
 import Navbar2 from '../../components/NavbarComp2.vue';
 import auth from "../../services/Auth";
+import { required, minLength, between } from 'vuelidate/lib/validators';
 
 export default{
     name:'LoginView',
@@ -45,7 +50,7 @@ export default{
                 email:'',
                 password:'',
             },
-
+            validate:[],
         }
 
     },
@@ -59,7 +64,7 @@ export default{
                     //redirecionando, aqui estou empurrando uma string que é a rota
                     this.$router.push({name:'home'});
                 }
-            });
+            });           
         }
     }
 
