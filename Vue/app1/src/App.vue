@@ -1,17 +1,22 @@
 <template>
 
   <div class="container">
-    <!-- <HeaderComp/>
+    <!-- <HeaderComp/> -->
 
-    <MainComp/>
+    <!-- <MainComp/> -->
     
-    <FooterComp/> -->
+    <!-- <FooterComp/> -->
 
     <!-- <CondicionalComp/> -->
     
     <!-- <VModelComp/> -->
+
     <!-- <EventsComp/> -->
 
+    <!-- <ComputedComp/> -->
+
+    <WatchComp/>
+    
     <ComputedComp/>
 
   </div>
@@ -26,7 +31,9 @@
 // import CondicionalComp from './components/Condicionais/CondicionalComp.vue';
 // import VModelComp from './components/vmodel/VModelComp.vue'
 // import EventsComp from './components/events/EventsComp.vue'
-import ComputedComp from './components/ComputedComp/ComputedComp.vue'; 
+// import ComputedComp from './components/ComputedComp/ComputedComp.vue'; 
+import WatchComp from './components/Watchs/WatchComp.vue'
+
 
 //Este é o componente inicial 
 
@@ -40,7 +47,8 @@ export default {
     // CondicionalComp
     // VModelComp,
     // EventsComp,
-    ComputedComp,
+    // ComputedComp,
+    WatchComp,
   },
 
 
