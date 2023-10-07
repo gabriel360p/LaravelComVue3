@@ -4,7 +4,7 @@
         <form @submit.prevent="">
 
             <div id="task-container">
-                <div id="task-container-div" style="width: 50%;">
+                <div id="task-container-div" style="width: 100%;">
                     <input id="task-container-div-input"  type="text"
                         class="form-control mb-4" name="" placeholder="Tarefa" v-model="task.title">
                 </div>
@@ -12,11 +12,11 @@
 
             <div id="task-container" v-show="details.show">
             
-                <div id="task-container-div" style="width: 50%;">
+                <div id="task-container-div" style="width: 100%;">
                     <textarea class="form-control" name="" id="task-container-div-input" cols="20" rows="3"  v-model="task.description" placeholder="Descrição"></textarea>
                 </div>
 
-                <div id="task-container-div" style="width: 50%;">
+                <div id="task-container-div" style="width: 100%;">
                     <div class="mb-3">
                         <select class="form-select form-select-lg mt-4" name="" id="task-container-div-input">
                             <option selected>Categorias</option>    

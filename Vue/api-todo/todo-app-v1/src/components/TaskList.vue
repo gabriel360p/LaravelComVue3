@@ -19,17 +19,17 @@
 
                         <div v-if="corrente.completed">
                             <button id="button-icon">
-                                Reabrir <i class="fa-solid fa-check"></i>
+                                <i style="color:lightgreen;" class="fa-solid fa-check-double"></i>
                             </button>
                         </div>
                         <div v-else>
                             <button id="button-icon">
-                                Concluir <i class="fa-solid fa-check"></i>
+                                <i class="fa-solid fa-check"></i>
                             </button>
                         </div>
                         
                         <button id="button-icon">
-                            Apagar <i class="fa-solid fa-trash"></i>
+                            <i style="color: red;" class="fa-solid fa-trash"></i>
                         </button>
 
                     </div>
@@ -39,17 +39,30 @@
             </div>
 
         </div> 
-
+        {{ taskTypeList() }}
     </div>
 </template>
 
 <script>
     export default {
         name:'TaskList',
+
         methods:{
-            show(){
-             
+            //controle de listagem
+            taskTypeList(){
+                if(this.dynamicList=='all'){
+                    console.log("Listando todas as tarefas",this.dynamicList)
+                }else if(this.dynamicList=='completed'){
+                    console.log("Listando todas as tarefas concluídas",this.dynamicList)
+                }else if(this.dynamicList=='uncompleted'){
+                    console.log("Listando todas as tarefas não concluídas",this.dynamicList)
+                }
             }
+        }, 
+
+        props:{
+            //usando props pra controlar a listagem e usar somente um único componente que vai servir para listar as tarefas em diferentes situações
+            dynamicList:String,
         },
 
         data(){
@@ -58,7 +71,7 @@
                     { 
                         "id": 1,
                         "title": "delectus aut autem",
-                        "completed": false,
+                        "completed": true,
                         "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus, rem?",
                         "categorie": "Lorem Lorem",
                     },

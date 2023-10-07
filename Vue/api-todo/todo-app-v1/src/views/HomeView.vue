@@ -1,8 +1,10 @@
 <template>
 
   <div class="home">
-    <NewTask/>
-    <TaskList class="mt-4"/>
+    
+    <NewTask class="mt-3"/>
+
+    <TaskList class="mt-3 " dynamicList="all"/>
 
   </div>
 
