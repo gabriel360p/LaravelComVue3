@@ -138,7 +138,7 @@ Route::delete('/itens/delete', function (Request $request) {
     Iten::find($request->id)->delete();
 });
 
-Route::put('/itens/update', function (Request $request) {
+Route::put('/itens/update', function (Request $request) { 
     $i=Iten::find($request->id);
     $i->update($request->all());
 });

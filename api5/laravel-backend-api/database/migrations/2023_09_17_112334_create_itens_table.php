@@ -22,9 +22,6 @@ return new class extends Migration
             $table->string('place');
             $table->string('categorie');
 
-            // $table->foreignId('place_id')->constrained();
-            // $table->foreignId('categorie_id')->constrained();
-
             $table->timestamps();
         });
     }
