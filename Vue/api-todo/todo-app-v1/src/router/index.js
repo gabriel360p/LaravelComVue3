@@ -2,6 +2,10 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 
 const routes = [
+  { path: '/:pathMatch(.*)*',
+   name: 'NotFound', 
+   component: () => import(/* webpackChunkName: "about" */ '../views/Error404View.vue')
+  },
   {
     path: '/',
     name: 'home',

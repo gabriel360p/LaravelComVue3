@@ -7,8 +7,8 @@
     <div class="col-auto">
       <nav>
         <router-link to="/">Tarefas</router-link> |
-        <router-link to="/completed">Concluídas</router-link> |
-        <router-link to="/uncompleted">Não Concluídas</router-link> |
+        <!-- <router-link to="/completed">Concluídas</router-link> |
+        <router-link to="/uncompleted">Não Concluídas</router-link> |  -->
         <router-link to="/categories">Categorias</router-link> |
         <router-link to="/about">Sobre</router-link>
       </nav>
