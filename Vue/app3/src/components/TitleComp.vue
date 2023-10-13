@@ -1,20 +1,18 @@
 <template>
     <div>
-        <h1>{{msg}}</h1>
-    </div>  
+        <h1>{{ msg }}</h1>
+    </div>
 </template>
 
 <script>
-    export default {
-        name: 'TitleComp',
+export default {
+    name: 'TitleComp',
 
-        props:{
-            msg:String,
-        },
+    props: {
+        msg: String,
+    },
 
-    }
+}
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>

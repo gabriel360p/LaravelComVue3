@@ -1,6 +1,6 @@
 <template>
     <div>
-        <TitleComp msg="Estudando o uso de VUEX - STATE"/>
+        <TitleComp msg="Estudando o uso de VUEX - STATE" />
         <p>O State funciona como um banco de dados para o front-end, a gente pode usar para guardar dados, como por exemplo,
             dados do usuário logado</p>
         <p>A gente pode guardar dados lá, é isso, quase como um mini banco de dados</p>
@@ -19,7 +19,7 @@
 import TitleComp from './TitleComp.vue';
 export default {
     name: 'StateComp',
-    components:{
+    components: {
         TitleComp,
     },
 

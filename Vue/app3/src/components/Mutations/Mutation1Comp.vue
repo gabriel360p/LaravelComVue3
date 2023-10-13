@@ -29,7 +29,7 @@
 </template>
 
 <script>
-import TitleComp from './TitleComp.vue';
+import TitleComp from '../TitleComp.vue';
 
 export default {
     name: 'Mutation1Comp',
